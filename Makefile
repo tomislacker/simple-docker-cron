@@ -16,3 +16,9 @@ enter-container: container
 		$(CONTAINER_REPO):$(CONTAINER_TAG) \
 			-i
 
+run-container: container
+	docker run \
+		-it \
+		--rm \
+		$(CONTAINER_REPO):$(CONTAINER_TAG) \
+		|| true
